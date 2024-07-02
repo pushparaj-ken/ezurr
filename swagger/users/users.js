@@ -87,6 +87,14 @@
  *              swiftcode: 
  *                type: string
  *                example : swiftcode
+ *     IfscResponseBody:
+ *       type: object
+ *       required:
+ *         - ifsccode
+ *       properties:
+ *         ifsccode:
+ *           type: string
+ *           example: IOBA0000307
  *     UsersResponse:
  *       type: object
  *       properties:
@@ -107,6 +115,23 @@
  *         application/json:
  *            schema:
  *              $ref: '#/components/schemas/UsersRegisterBody'
+ *     responses:
+ *       200:
+ *         description: Data Saved Success
+ */
+
+/**
+ * @swagger
+ * /api/users/ifsc:
+ *   post:
+ *     summary: IFSC
+ *     tags: [Users]
+ *     requestBody:
+ *      required: true
+ *      content:
+ *         application/json:
+ *            schema:
+ *              $ref: '#/components/schemas/IfscResponseBody'
  *     responses:
  *       200:
  *         description: Data Saved Success
