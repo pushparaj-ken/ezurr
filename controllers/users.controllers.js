@@ -19,8 +19,6 @@ const RegisterDetails = catchAsync(async (req, res, next) => {
           let BankKeys = [];
           values.Bank.accountholdername = values.Bank.accountholdername.toUpperCase();
           values.Bank.ifsccode = values.Bank.ifsccode.toUpperCase();
-          values.Bank.bankname = values.Bank.bankname.toUpperCase();
-          values.Bank.branchname = values.Bank.branchname.toUpperCase();
           for (var k in values.Bank) BankKeys.push(k);
           for (each in BankKeys) {
             if (values.Bank[BankKeys[each]] != "") {
