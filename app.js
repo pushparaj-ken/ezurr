@@ -20,7 +20,7 @@ const routes = ['./swagger/**/*.js'];
 
 const swaggerSpec = generateSwagger('Ezurr Users', '1.0.0', routes);
 
-serveSwagger(app, swaggerSpec, '/user/api/docs');
+serveSwagger(app, swaggerSpec, '/api/user/docs');
 // view engine setup
 
 mongoose.Promise = global.Promise;
